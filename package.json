@@ -1,0 +1,15 @@
+{
+  "name": "electron-app-tareas",
+  "version": "1.0.0",
+  "description": "Aplicación de tareas",
+  "main": "src/main/main.js",
+  "author": "J0k3rD3v_S",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "set DEBUG=true & electron ."
+  },
+  "devDependencies": {
+    "electron": "^37.3.1"
+  }
+}

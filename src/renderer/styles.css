@@ -1,0 +1,35 @@
+:root, body {
+  padding: 0 0;
+  margin: 0 0;
+  background-color: rgb(0, 25, 32);
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1, h2, h3, h4, h5, p {
+  padding: 0 0;
+  margin: 0 0;
+}
+.container {
+  text-align: center;
+  padding: 2px 2px;
+}
+#taskInput {
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  width: 60%;
+  border-radius: 5px;
+  color: #fff;
+}
+#taskButton {
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+.taskContainer {
+  border: 1px solid #79b3ff;
+  padding: 10px 10px;
+  margin-top: 10px;
+}
