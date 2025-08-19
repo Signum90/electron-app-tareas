@@ -67,8 +67,8 @@ ipcMain.handle('add-tasks', (event, task) => {
   
   
   // Registrar tarea
-  saveTasks(tasks);
-  return tasks;
+  // saveTasks(tasks);
+  // return tasks;
 })
 
 //# XXXXX >
