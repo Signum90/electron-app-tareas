@@ -12,6 +12,3 @@ contextBridge.exposeInMainWorld('api', {
   toggleTask: (idTask) => ipcRenderer.invoke('toggle-task', idTask),
   deleteTask: (idTask) => ipcRenderer.invoke('delete-task', idTask)
 });
-
-//# XXXXX >s
-//# XXXXX >

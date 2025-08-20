@@ -53,7 +53,7 @@ const listTask = async () => {
 const addTask = async (e) => {
   
   e.preventDefault();
-  // Texto
+  // Texto  
   const task = $taskInput.value;
   // Validar
   if (task.trim() === "") return;
