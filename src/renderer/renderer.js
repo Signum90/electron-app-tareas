@@ -17,33 +17,46 @@ const listTask = async () => {
   // Recorrer tareas
   tasks.forEach(task => {
     const li = document.createElement('li');
-    li.textContent = task.description;
+    li.textContent = `${ task.description } / ${ task.date.split('T')[0] }`;
     if(task.completed){
       li.classList.add('completed')
-    }
+    };
+
     // Botón completar
     const toggleBtn = document.createElement("button");
     toggleBtn.textContent = task.completed ? "❌" : "✔️";
-    toggleBtn.classList.add('btnTask')
+    toggleBtn.classList.add('btnTask');
     toggleBtn.onclick = async () => {
-      // await window.api.toggleTask(task.id);
+      await window.api.toggleTask(task.id);
       listTask();
     };
 
-    // Añadir elemento a la lista
+    // Botón Eliminar
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = '➖';
+    deleteBtn.classList.add('btnTask');
+    deleteBtn.onclick = async () => {
+      await window.api.deleteTask(task.id);
+      listTask();
+    };
+
+    // Añadir Botones
+    li.appendChild(deleteBtn);
     li.appendChild(toggleBtn)
+    // Añadir elemento a la lista
     $taskList.appendChild(li)
   });
   
 }
 
 //# FUN: Añadir Tarea >
-const addTask = async () => {
+const addTask = async (e) => {
+  
+  e.preventDefault();
   // Texto
   const task = $taskInput.value;
   // Validar
   if (task.trim() === "") return;
-  console.log("add-task", task);
   // Llamar api ipcRenderer
   await window.api.addTask(task);
   // Vaciar input

@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, p {
   background-color: transparent;
   border: 1px solid white;
   width: 60%;
+  height: 30px;
   border-radius: 5px;
   color: #fff;
 }
@@ -28,10 +29,19 @@ h1, h2, h3, h4, h5, p {
   border-radius: 5px;
   cursor: pointer; 
 }
+.container-fluid {
+  padding: 10px;
+  height: 100%;
+}
 .taskContainer {
   border: 1px solid #79b3ff;
   padding: 10px 10px;
   margin-top: 10px;
+  border-radius: 5px;
+  height: 100%;
+}
+.taskContainer p {
+  text-align: center;
 }
 .completed {
   text-decoration: line-through;
@@ -42,4 +52,12 @@ h1, h2, h3, h4, h5, p {
   border: none;
   margin-left: 5px;
   cursor: pointer;
+  float: right;
+}
+ul > li {
+  border: 1px solid white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  list-style: decimal;
 }

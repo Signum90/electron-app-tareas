@@ -10,14 +10,17 @@
   <div class="container">
     <h1>App Tareas</h1>
     <hr>
-    <input type="text" id="taskInput" placeholder="Nueva Tarea">
-    <button id="taskButton" onclick="addTask()">Nueva Tarea</button>
+    <form onsubmit="addTask(event)">
+      <input type="text" id="taskInput" placeholder="Ingresar la Nueva Tarea">
+    </form>
   </div>
-  <div class="taskContainer">
-    <p>Listado de tareas</p>
-    <ul id="taskList">
-
-    </ul>
+  <div class="container-fluid">
+    <div class="taskContainer">
+      <p>Listado de tareas</p>
+      <ul id="taskList">
+  
+      </ul>
+    </div>
   </div>
   <script src="./renderer.js"></script>
 </body>

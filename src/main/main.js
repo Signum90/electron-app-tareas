@@ -44,6 +44,8 @@ const saveTasks = (tasks) => {
 //# IPC HANDLERS: Manejadores de canales IPC >
 //# Leer Tareas >
 ipcMain.handle('get-tasks', () => {
+  console.log('pp-get-task');
+  
   return readTasks();
 })
 
@@ -68,6 +70,32 @@ ipcMain.handle('add-tasks', (event, task) => {
   return tasks;
 })
 
+//# Completar, Descompletar Tareas >
+ipcMain.handle('toggle-task', (event, idTask) => {
+  
+  // Traer Tareas
+  const tasks = readTasks();
+  
+  // Mapear
+  const updateTask = tasks.map( task => (
+    // Validar id
+    task.id === idTask ? {...task, completed: !task.completed } : task
+  ));
+  
+  // Guardar Tareas
+  saveTasks(updateTask);
+  // return updateTask;
+})
+//# Eliminar tareas >
+ipcMain.handle('delete-task', (event, idTask) => {
+  // Cargar Tareas
+  const tasks = readTasks();
+  // Filtrar y guarnar nuevas tareas
+  const newTasks = tasks.filter((task) => task.id !== idTask);
+  // Guardar Tareas
+  saveTasks(newTasks);
+  
+})
 //# XXXXX >
 
 //# START >
