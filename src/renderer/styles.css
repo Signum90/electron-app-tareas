@@ -33,3 +33,13 @@ h1, h2, h3, h4, h5, p {
   padding: 10px 10px;
   margin-top: 10px;
 }
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.btnTask {
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}

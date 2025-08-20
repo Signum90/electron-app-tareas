@@ -24,6 +24,7 @@ const createWindow = () => {
 
 //# TASK DB MANAGEMENT >
 const TASK_FILE = path.join(__dirname, '../db/db.json');
+console.log(TASK_FILE);
 
 //# Read Tasks >
 const readTasks = () => {
@@ -32,7 +33,7 @@ const readTasks = () => {
   // Leer archivo
   const data = fs.readFileSync(TASK_FILE, "utf-8");
   // Retornar en formato json
-  return JSON.parse(data | "[]");
+  return JSON.parse(data || "[]");
 }
 //# Save Tasks File >
 const saveTasks = (tasks) => {
@@ -57,18 +58,14 @@ ipcMain.handle('add-tasks', (event, task) => {
   const newTask = {
     id: uuidv4(),
     description: task,
-    date: Date.now(),
+    date: new Date(),
     completed: false
   }
   // Añadir Tarea
-  // tasks.push(newTask);
-  console.log("pp", tasks);
-  console.log("pptask", task);
-  
-  
+  tasks.push(newTask);
   // Registrar tarea
-  // saveTasks(tasks);
-  // return tasks;
+  saveTasks(tasks);
+  return tasks;
 })
 
 //# XXXXX >
