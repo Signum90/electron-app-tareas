@@ -3,7 +3,7 @@
 ============================================================ */
 /**@DESC: Proceso principal */
 //# IMPORTS >
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs');
 const { v4: uuidv4 } = require('uuid')
@@ -11,8 +11,8 @@ const { v4: uuidv4 } = require('uuid')
 //# FUN: CREATE WINDOW >
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 800,
+    // width: 1200,
+    // height: 800,
     webPreferences: {
       // Llamado desde el main: src/main/main.js
       preload: path.join(__dirname, '../preload/preload.js')
@@ -20,6 +20,7 @@ const createWindow = () => {
   });
   // Llamado desde el main: src/main/main.js
   win.loadFile(path.join(__dirname, '../renderer/index.html'));
+  win.maximize(); // Maximo tamaño
 }
 
 //# TASK DB MANAGEMENT >
@@ -103,7 +104,6 @@ app.whenReady().then(() => {
   
   //# Crear ventana >
   createWindow();
-  
   //# Conf: macos >
   app.on('activate', () => {
     

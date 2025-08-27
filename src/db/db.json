@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": "7eef9444-c374-47ee-a4fc-1d43c3d38ec1",
+    "description": "Reajustar datos de servidores, pasados por el Diego",
+    "date": "2025-08-25T13:10:20.555Z",
+    "completed": false
+  },
+  {
+    "id": "616e9033-c7a4-46e1-acae-931622cc2f8b",
+    "description": "Mejorar validaciones en el evento Solicitud de la pantalla wpssaviaws",
+    "date": "2025-08-25T13:26:57.151Z",
+    "completed": true
+  },
+  {
+    "id": "1f2fbdf7-4123-4a8e-bee2-19b076674a61",
+    "description": "Refactorización de procedimientos wpsaviaws",
+    "date": "2025-08-25T16:29:49.729Z",
+    "completed": true
+  },
+  {
+    "id": "fb8ac058-c06e-4167-a69e-06f4cf0bcadc",
+    "description": "Crear validaciones de datos, pantalla wpssavia - MedicColombia",
+    "date": "2025-08-26T12:34:45.135Z",
+    "completed": true
+  },
+  {
+    "id": "a9d68916-07a8-4e00-8da9-73c3f9771e7c",
+    "description": "Crear SDT para validación de errores",
+    "date": "2025-08-26T12:57:07.589Z",
+    "completed": true
+  },
+  {
+    "id": "dcf9c03e-b912-416e-a9c4-6f98a0c7c854",
+    "description": "Ajustar el servicio de autenticación de usuario, proceso de respuesta ante fallos de autenticación, SAVIA",
+    "date": "2025-08-26T13:03:40.811Z",
+    "completed": true
+  },
+  {
+    "id": "119fcc4c-8a4e-456a-930f-8239d4f484d6",
+    "description": "Reconfigurar el VPN Medic Colombia para la sub red 10.254.10.0/24",
+    "date": "2025-08-26T13:41:39.125Z",
+    "completed": true
+  },
+  {
+    "id": "99a84ecd-615f-40ee-b3ac-148d59c6418c",
+    "description": "Despliegue de pantalla de turnos en los servidores de todo drogas, dispensación y distribución ",
+    "date": "2025-08-26T21:08:58.556Z",
+    "completed": true
+  },
+  {
+    "id": "3c92c14e-9453-4a7e-ba8a-c85b54305027",
+    "description": "Revisión pantalla wpssavia, Web Services con Fredy",
+    "date": "2025-08-27T12:11:45.868Z",
+    "completed": false
+  },
+  {
+    "id": "3d7bc320-8e31-4fb3-aa20-2e9038be9d4a",
+    "description": "Construicción del mensaje de campos incompletos para solicitud sin autorización, servicio rest savia, pantalla wpssaciaws",
+    "date": "2025-08-27T12:36:52.590Z",
+    "completed": false
+  },
+  {
+    "id": "4d273ee6-1624-48bf-b1d4-e0b4a56718a7",
+    "description": "Revisar el proceso de la VPN Medic colombia con Pana B.",
+    "date": "2025-08-27T12:45:16.825Z",
+    "completed": false
+  },
+  {
+    "id": "32f3eb9a-2df3-44d7-bb0a-2288ef9aa95b",
+    "description": "Testing endpoints ajustados para el proceso Medic colombia con Zorn, Ticket-972667-1",
+    "date": "2025-08-27T13:21:49.242Z",
+    "completed": false
+  }
+]
